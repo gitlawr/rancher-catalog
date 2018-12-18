@@ -10,7 +10,7 @@ services:
     privileged: true
     network_mode: host
     pid: host
-    command: plugin-manager --disable-cni-setup --metadata-address 169.254.169.250
+    command: plugin-manager --disable-cni-setup --metadata-address 169.254.169.250 --arpsync-interval ${ARP_SYNC_INTERVAL}
     environment:
       DOCKER_BRIDGE: docker0
       METADATA_IP: 169.254.169.250
